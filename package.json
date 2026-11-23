@@ -1,0 +1,22 @@
+{
+  "name": "finder-image-converter",
+  "version": "1.0.0",
+  "description": "macOS Finder image resizer, converter, and optimizer powered by libvips (sharp) and Quick Actions",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "imgresize": "./bin/imgresize.mjs"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "sync-actions": "node bin/imgresize.mjs sync-actions",
+    "install-actions": "bash scripts/install.sh",
+    "uninstall-actions": "bash scripts/uninstall.sh"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "sharp": "^0.34.0"
+  }
+}
